@@ -29,6 +29,9 @@ The following assignments are all illegal (they cause compiler errors):
     o = x;
     x = o;
 
+What can you say about the class hierarchy of the classes? draw a class diagram.
+
+
 AbstractList Hierarchy (Exercise 8.19)
 -----------------
 Draw an inheritance hierarchy of AbstractList and all its (direct and indirect subclasses as they are defined in the Java standard library.)
