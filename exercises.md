@@ -4,6 +4,7 @@ Inheritance Exercises (Chapter 8)
 Refactor the Figures Project
 ------------------------------
 Recall the “figures” Project from the very beginning...
+
 1. find code duplications in the different shapes.
 2. refactor the figures project such that the common things of all shapes are in a common superclass “Shape”.
 
