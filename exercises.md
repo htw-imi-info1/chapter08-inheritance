@@ -11,16 +11,19 @@ Recall the “figures” Project from the very beginning...
 Assigment Compatibility (Exercise 8.18 from the Book)
 ------------------------
 You have four classes and a variable of each of these:
+
     O o;
     X x;
     T t;
     M m;
 
 The following assignments are all legal (they all compile):
+
     m = t;
     m = x;
     o = t;
 The following assignments are all illegal (they cause compiler errors):
+
     o = m;
     o = x;
     x = o;
