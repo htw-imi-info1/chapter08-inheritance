@@ -54,16 +54,21 @@ public class NewsFeed
      */
     public void show()
     {
-        // display all text posts
+        System.out.println(getFeed());
+    }
+    public String getFeed(){
+        String feed = "";
+        // append all text posts
         for(MessagePost message : messages) {
-            message.display();
-            System.out.println();   // empty line between posts
+            feed += message.display();
+            feed += "\n"; // empty line between posts
         }
 
         // display all photos
         for(PhotoPost photo : photos) {
-            photo.display();
-            System.out.println();   // empty line between posts
+            feed += photo.display();
+            feed += "\n"; // empty line between posts
         }
+        return feed;
     }
 }

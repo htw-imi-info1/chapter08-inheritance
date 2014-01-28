@@ -85,25 +85,25 @@ public class MessagePost
      * (Currently: Print to the text terminal. This is simulating display 
      * in a web browser for now.)
      */
-    public void display()
+    public String display()
     {
-        System.out.println(username);
-        System.out.println(message);
-        System.out.print(timeString(timestamp));
+        String display = "";
+        display += username +"\n";
+        display += message + "\n";
+        display += timeString(timestamp);
         
         if(likes > 0) {
-            System.out.println("  -  " + likes + " people like this.");
+            display += "  -  " + likes + " people like this.";
         }
-        else {
-            System.out.println();
-        }
+        display += "\n";
         
         if(comments.isEmpty()) {
-            System.out.println("   No comments.");
+            display += "   No comments.\n" ;
         }
         else {
-            System.out.println("   " + comments.size() + " comment(s). Click here to view.");
+            display +="   " + comments.size() + " comment(s). Click here to view.\n";
         }
+        return display;
     }
     
     /**

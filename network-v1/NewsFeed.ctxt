@@ -11,4 +11,6 @@ comment2.text=\n\ Add\ a\ photo\ post\ to\ the\ news\ feed.\n\ \n\ @param\ photo
 comment3.params=
 comment3.target=void\ show()
 comment3.text=\n\ Show\ the\ news\ feed.\ Currently\:\ print\ the\ news\ feed\ details\n\ to\ the\ terminal.\ (To\ do\:\ replace\ this\ later\ with\ display\n\ in\ web\ browser.)\n
-numComments=4
+comment4.params=
+comment4.target=java.lang.String\ getFeed()
+numComments=5
