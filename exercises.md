@@ -42,8 +42,13 @@ Exercises Chapter 9
 Does the static type matter?
 --------------------
 Consider the following example:
-class Vehicle {}
-class Car extends Vehicle { public int getNumberOfDoors(){ return 5;}}
+
+    class Vehicle {}
+    class Car extends Vehicle {
+        public int getNumberOfDoors(){
+            return 5;
+        }
+    }
 
     Vehicle v = new Car();
     Car c = new Car();
