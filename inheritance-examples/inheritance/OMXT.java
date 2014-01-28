@@ -1,10 +1,10 @@
 
 public class OMXT
 {
-    class O{}
-    class M{}
-    class X{}
-    class T extends M{}
+    class O extends M{}
+    class M {}
+    class X extends M{}
+    class T extends O{}
     O o; 
     M m;
     X x;
@@ -16,9 +16,11 @@ public class OMXT
         o = t;
     }
     public void invalid(){
+        /*
         o = m;
         o = x;
         x = o;
+        */
     
     }
 
