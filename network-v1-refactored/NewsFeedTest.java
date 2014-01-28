@@ -47,8 +47,8 @@ public class NewsFeedTest
         MessagePost mp1 = new MessagePost("Sandi", "objects!");
         PhotoPost pp1 = new PhotoPost("Jochen", "hund.jpg", "Das ist ein Hund");
         NewsFeed newsFeed1 = new NewsFeed();
-        newsFeed1.addMessagePost(mp1);
-        newsFeed1.addPhotoPost(pp1);
+        newsFeed1.addPost(mp1);
+        newsFeed1.addPost(pp1);
         //when
         String feed = newsFeed1.getFeed();
         assertTrue("Sandis Post",feed.contains("Sandi"));

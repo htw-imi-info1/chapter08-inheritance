@@ -16,10 +16,7 @@ import java.util.ArrayList;
 public class NewsFeed
 {
     private ArrayList<Post> posts;
-    // replaces:
-  //  private ArrayList<MessagePost> messages;
-  //  private ArrayList<PhotoPost> photos;
-
+  
     /**
      * Construct an empty news feed.
      */
@@ -33,20 +30,11 @@ public class NewsFeed
      * 
      * @param text  The text post to be added.
      */
-    public void addMessagePost(MessagePost message)
+    public void addPost(Post message)
     {
         posts.add(message);
     }
 
-    /**
-     * Add a photo post to the news feed.
-     * 
-     * @param photo  The photo post to be added.
-     */
-    public void addPhotoPost(PhotoPost photo)
-    {
-        posts.add(photo);
-    }
 
     /**
      * Show the news feed. Currently: print the news feed details
