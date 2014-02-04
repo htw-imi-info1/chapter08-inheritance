@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -19,7 +18,7 @@ public class NewsFeedTest
     public NewsFeedTest()
     {
     }
-
+    NewsFeed newsFeed1;
     /**
      * Sets up the test fixture.
      *
@@ -28,27 +27,18 @@ public class NewsFeedTest
     @Before
     public void setUp()
     {
-    }
-
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
+        //given
+        MessagePost mp1 = new MessagePost("Sandi", "objects!");
+        PhotoPost pp1 = new PhotoPost("Jochen", "hund.jpg", "Das ist ein Hund");
+        newsFeed1 = new NewsFeed();
+        newsFeed1.addPost(mp1);
+        newsFeed1.addPost(pp1);
     }
 
     @Test
     public void feedShowsUsers()
     {
-        //given
-        MessagePost mp1 = new MessagePost("Sandi", "objects!");
-        PhotoPost pp1 = new PhotoPost("Jochen", "hund.jpg", "Das ist ein Hund");
-        NewsFeed newsFeed1 = new NewsFeed();
-        newsFeed1.addPost(mp1);
-        newsFeed1.addPost(pp1);
+
         //when
         String feed = newsFeed1.getFeed();
         assertTrue("Sandis Post",feed.contains("Sandi"));
