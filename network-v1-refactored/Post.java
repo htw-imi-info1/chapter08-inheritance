@@ -20,19 +20,22 @@ public class Post
         comments = new ArrayList<String>();
 
     }
-    
-     public String display()
+
+    public String getAuthor(){
+        return username;}
+
+    public String display()
     {
         String display = "";
         display += username +"\n";
         //display += message + "\n";
         display += timeString(timestamp);
-        
+
         if(likes > 0) {
             display += "  -  " + likes + " people like this.";
         }
         display += "\n";
-        
+
         if(comments.isEmpty()) {
             display += "   No comments.\n" ;
         }
@@ -41,6 +44,7 @@ public class Post
         }
         return display;
     }
+
     /**
      * Create a string describing a time point in the past in terms 
      * relative to current time, such as "30 seconds ago" or "7 minutes ago".
@@ -49,7 +53,7 @@ public class Post
      * @param time  The time value to convert (in system milliseconds)
      * @return      A relative time string for the given time
      */
-    
+
     private String timeString(long time)
     {
         long current = System.currentTimeMillis();
@@ -63,7 +67,7 @@ public class Post
             return seconds + " seconds ago";
         }
     }
-    
+
     /**
      * Record one more 'Like' indication from a user.
      */
@@ -91,6 +95,7 @@ public class Post
     {
         comments.add(text);
     }
+
     /**
      * Return the time of creation of this post.
      * 
@@ -99,6 +104,17 @@ public class Post
     public long getTimeStamp()
     {
         return timestamp;
+    }
+
+    /**
+     * if you override equals, you should also override hash.
+     */
+    @Override
+    public boolean equals(Object other){
+        if (other instanceof Post){
+            Post otherPost = (Post)other;
+            return getAuthor().equals(otherPost.getAuthor());
+        } else return false;
     }
 
 }

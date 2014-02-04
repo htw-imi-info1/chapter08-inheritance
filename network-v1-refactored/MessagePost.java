@@ -42,28 +42,14 @@ public class MessagePost extends Post
      * (Currently: Print to the text terminal. This is simulating display 
      * in a web browser for now.)
      */
-    /*
+    
     public String display()
     {
-        String display = "";
-        display += username +"\n";
+        String display = super.display();
         display += message + "\n";
-        display += timeString(timestamp);
-        
-        if(likes > 0) {
-            display += "  -  " + likes + " people like this.";
-        }
-        display += "\n";
-        
-        if(comments.isEmpty()) {
-            display += "   No comments.\n" ;
-        }
-        else {
-            display +="   " + comments.size() + " comment(s). Click here to view.\n";
-        }
         return display;
     }
-    */
+     
     
     
 }
