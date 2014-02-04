@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -54,15 +53,23 @@ public class BTest
         assertEquals("B's method",b1.method());
         assertEquals("B's method",b2.method());
     }
-        @Test
+
+    @Test
     public void fieldLookupIsStatic()
     {
         assertEquals("A's field",a1.field);
         assertEquals("B's field",b1.field);
         assertEquals("A's field",b2.field);
     }
-
+    @Test
+    public void staticMethodsAreStatic()
+    {
+        assertEquals("A's static method",a1.staticMethod());
+        assertEquals("B's static method",b1.staticMethod());
+        assertEquals("A's static method",b2.staticMethod()); 
+        assertEquals("A's static method",A.staticMethod()); 
+        assertEquals("B's static method",B.staticMethod()); 
+    }
     
 }
-
 
