@@ -22,12 +22,10 @@ public class PhotoPost extends Post
      */
     public PhotoPost(String author, String filename, String caption)
     {
-        username = author;
+       super(author);
         this.filename = filename;
         this.caption = caption;
-        timestamp = System.currentTimeMillis();
-        likes = 0;
-        comments = new ArrayList<String>();
+        
     }
 
     /**
@@ -48,34 +46,6 @@ public class PhotoPost extends Post
     public String getCaption()
     {
         return caption;
-    }
-
-    /**
-     * Display the details of this post.
-     * 
-     * (Currently: Print to the text terminal. This is simulating display 
-     * in a web browser for now.)
-     */
-    public String displayX()
-    {
-        String display = "";
-        display += username+"\n";
-        display += "  [" + filename + "]\n";
-        display += "  " + caption +"\n";
-        display += timeString(timestamp);
-
-        if(likes > 0) {
-            display += "  -  " + likes + " people like this.";
-        }
-        display += "\n";
-
-        if(comments.isEmpty()) {
-            display += "   No comments.\n";
-        }
-        else {
-            display += "   " + comments.size() + " comment(s). Click here to view./n";
-        }
-        return display;
     }
 
     public String specificDisplay(){

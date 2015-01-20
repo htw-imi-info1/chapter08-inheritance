@@ -1,10 +1,19 @@
 import java.util.ArrayList;
 public class Post
 { 
-    protected String username;  // username of the post's author
-    protected long timestamp;
-    protected int likes;
-    protected ArrayList<String> comments;
+    private String username;  // username of the post's author
+    private long timestamp;
+    private int likes;
+    private ArrayList<String> comments;
+
+
+    public Post(String author)
+    {
+        username = author;
+        timestamp = System.currentTimeMillis();
+        likes = 0;
+        comments = new ArrayList<String>();
+    }
 
     /**
      * Record one more 'Like' indication from a user.

@@ -20,12 +20,9 @@ public class MessagePost extends Post
      */
     public MessagePost(String author, String text)
     {
-        username = author;
+        super(author);
         message = text;
-        timestamp = System.currentTimeMillis();
-        likes = 0;
-        comments = new ArrayList<String>();
-    }
+     }
 
       
     public String specificDisplay(){
