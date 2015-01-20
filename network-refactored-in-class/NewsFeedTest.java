@@ -73,6 +73,11 @@ public class NewsFeedTest
         assertTrue(newsFeed1.getFeed().contains("caption text"));
 
     }
+  @Test
+    public void messageShown(){
+        assertTrue(newsFeed1.getFeed().contains("text of message post"));
+
+    }
 
     @Test
     public void print(){
