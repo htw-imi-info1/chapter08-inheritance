@@ -6,7 +6,6 @@ public class Post
     protected int likes;
     protected ArrayList<String> comments;
 
-    
     /**
      * Record one more 'Like' indication from a user.
      */
@@ -24,6 +23,7 @@ public class Post
             likes--;
         }
     }
+
     /**
      * Add a comment to this post.
      * 
@@ -33,7 +33,7 @@ public class Post
     {
         comments.add(text);
     }
-    
+
     /**
      * Return the time of creation of this post.
      * 
@@ -43,6 +43,7 @@ public class Post
     {
         return timestamp;
     }
+
     /**
      * Create a string describing a time point in the past in terms 
      * relative to current time, such as "30 seconds ago" or "7 minutes ago".
@@ -51,7 +52,7 @@ public class Post
      * @param time  The time value to convert (in system milliseconds)
      * @return      A relative time string for the given time
      */
-    
+
     protected String timeString(long time)
     {
         long current = System.currentTimeMillis();
@@ -65,7 +66,12 @@ public class Post
             return seconds + " seconds ago";
         }
     }
-      /**
+
+    public String specificDisplay(){
+        return "";
+    }
+
+    /**
      * Display the details of this post.
      * 
      * (Currently: Print to the text terminal. This is simulating display 
@@ -75,16 +81,17 @@ public class Post
     {
         String display = "";
         display += username+"\n";
+        display += specificDisplay();
         // display += message + "\n";
-      //  display += "  [" + filename + "]\n";
-      //  display += "  " + caption +"\n";
+        //  display += "  [" + filename + "]\n";
+        //  display += "  " + caption +"\n";
         display += timeString(timestamp);
-        
+
         if(likes > 0) {
             display += "  -  " + likes + " people like this.";
         }
         display += "\n";
-        
+
         if(comments.isEmpty()) {
             display += "   No comments.\n";
         }
@@ -93,6 +100,5 @@ public class Post
         }
         return display;
     }
-    
 
 }

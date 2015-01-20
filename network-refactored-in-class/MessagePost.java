@@ -27,13 +27,11 @@ public class MessagePost extends Post
         comments = new ArrayList<String>();
     }
 
-    public String display(){
-        String display = "";
+      
+    public String specificDisplay(){
         
-        display += message + "\n";
-        display += super.display();
-        return display;
-    }
+       return  message + "\n";
+      }
 
     /**
      * Return the text of this post.

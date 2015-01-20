@@ -78,11 +78,10 @@ public class PhotoPost extends Post
         return display;
     }
 
-    public String display(){
+    public String specificDisplay(){
         String display = "";
         display += "  [" + filename + "]\n";
         display += "  " + caption +"\n";
-        display += super.display();
         return display;
     }
 
