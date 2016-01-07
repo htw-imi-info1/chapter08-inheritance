@@ -35,13 +35,13 @@ public class NewsFeedTest
     {
         newsFeed1 = new NewsFeed();
         messageP1 = new MessagePost("bk", "hallo");
-        newsFeed1.addMessagePost(messageP1);
+        newsFeed1.addPost(messageP1);
         messageP2 = new MessagePost("asdf", "bla");
-        newsFeed1.addMessagePost(messageP2);
+        newsFeed1.addPost(messageP2);
         newsFeed1.getFeed();
         newsFeed1.show();
         photoPos1 = new PhotoPost("bk", "asdf.jpg", "bla");
-        newsFeed1.addPhotoPost(photoPos1);
+        newsFeed1.addPost(photoPos1);
         newsFeed1.show();
     }
 
@@ -51,9 +51,9 @@ public class NewsFeedTest
     public void simpleFeed()
     {
         // given
-        newsFeed1.addMessagePost(messageP1);
-        newsFeed1.addMessagePost(messageP2);
-        newsFeed1.addPhotoPost(photoPos1);
+        newsFeed1.addPost(messageP1);
+        newsFeed1.addPost(messageP2);
+        newsFeed1.addPost(photoPos1);
         //when
         String feed = newsFeed1.getFeed();
         //then
@@ -67,7 +67,7 @@ public class NewsFeedTest
     @Test
     public void testComments()
     {
-        newsFeed1.addMessagePost(messageP1);
+        newsFeed1.addPost(messageP1);
         messageP1.addComment("this is a comment");
         messageP1.addComment("this is a second comment");
         assertTrue("comment is counted", newsFeed1.getFeed().contains("2 comment"));
