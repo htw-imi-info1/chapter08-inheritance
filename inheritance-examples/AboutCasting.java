@@ -43,11 +43,11 @@ public class AboutCasting
         list.add("eins");
         list.add("zwei");
         list.add("drei");
-        String actual = (String)list.get(0);
+        String actual = list.get(0);
         assertEquals("eins", actual);
-        actual = (String)list.get(1);
+        actual = list.get(1);
         assertEquals("zwei", actual);
-        actual = (String)list.get(2);
+        actual = list.get(2);
         assertEquals("drei", actual);
 
     }
