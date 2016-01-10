@@ -9,9 +9,7 @@ import java.util.*;
 /**
  * The test class AboutCasting.
  *
- * @author  (your name)
- * @version (a version number or a date)
- */
+ **/
 public class AboutCasting
 {
     /**
@@ -21,7 +19,7 @@ public class AboutCasting
     {
     }
 
-
+    @SuppressWarnings("unchecked")
     @Test(expected=ClassCastException.class)
     public void aboutUnsafeTypes(){
         ArrayList list = new ArrayList();

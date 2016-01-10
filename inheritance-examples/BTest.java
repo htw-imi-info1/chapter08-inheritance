@@ -12,9 +12,9 @@ import org.junit.Test;
  */
 public class BTest
 {
-    private A a1;
-    private B b1;
-    private A b2; // Static Type: A
+    private A a;
+    private B b;
+    private A bDeclaredAsA; // Static Type: A
 
     /**
      * Default constructor for test class BTest
@@ -31,9 +31,9 @@ public class BTest
     @Before
     public void setUp()
     {
-        a1 = new A();
-        b1 = new B();
-        b2 = new B(); // dynamic Type: B
+        a = new A();
+        b = new B();
+        bDeclaredAsA = new B(); // dynamic Type: B
     }
 
     /**
@@ -49,24 +49,24 @@ public class BTest
     @Test
     public void methodLookupIsDynamic()
     {
-        assertEquals("A's method",a1.method());
-        assertEquals("B's method",b1.method());
-        assertEquals("B's method",b2.method());
+        assertEquals("A's method",a.method());
+        assertEquals("B's method",b.method());
+        assertEquals("B's method",bDeclaredAsA.method());
     }
 
     @Test
     public void fieldLookupIsStatic()
     {
-        assertEquals("A's field",a1.field);
-        assertEquals("B's field",b1.field);
-        assertEquals("A's field",b2.field);
+        assertEquals("A's field",a.field);
+        assertEquals("B's field",b.field);
+        assertEquals("A's field",bDeclaredAsA.field);
     }
     @Test
     public void staticMethodsAreStatic()
     {
-        assertEquals("A's static method",a1.staticMethod());
-        assertEquals("B's static method",b1.staticMethod());
-        assertEquals("A's static method",b2.staticMethod()); 
+        assertEquals("A's static method",a.staticMethod());
+        assertEquals("B's static method",b.staticMethod());
+        assertEquals("A's static method",bDeclaredAsA.staticMethod()); 
         assertEquals("A's static method",A.staticMethod()); 
         assertEquals("B's static method",B.staticMethod()); 
     }
