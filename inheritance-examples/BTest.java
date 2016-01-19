@@ -36,16 +36,6 @@ public class BTest
         bDeclaredAsA = new B(); // dynamic Type: B
     }
 
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
-    }
-
     @Test
     public void methodLookupIsDynamic()
     {
