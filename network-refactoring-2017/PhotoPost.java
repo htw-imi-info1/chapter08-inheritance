@@ -46,32 +46,15 @@ public class PhotoPost extends Post
     {
         return caption;
     }
-      /**
-     * Display the details of this post.
-     * 
-     * (Currently: Print to the text terminal. This is simulating display 
-     * in a web browser for now.)
-     */
-    public String display()
+
+    public String displayContent()
     {
-        String result = "";
-        result += username;
+        String result = "["+filename+"]";
         result +="\n";
-        result += timeString(timestamp);
+        result += caption;
         result +="\n";
-        if(likes > 0) {
-            result += "  -  " + likes + " people like this.\n";
-        }
-        else {
-              result +="\n";
-        }
-        
-        if(comments.isEmpty()) {
-            result += "   No comments.\n";
-        }
-        else {
-            result += "   " + comments.size() + " comment(s). Click here to view.\n";
-        }
+
         return result;
     }
+
 }

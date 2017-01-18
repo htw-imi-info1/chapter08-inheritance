@@ -2,5 +2,5 @@
 comment0.params=author
 comment0.target=VideoPost(java.lang.String)
 comment1.params=
-comment1.target=java.lang.String\ display()
+comment1.target=java.lang.String\ displayContent()
 numComments=2

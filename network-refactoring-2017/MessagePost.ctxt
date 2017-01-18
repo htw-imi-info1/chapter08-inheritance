@@ -6,6 +6,6 @@ comment1.params=
 comment1.target=java.lang.String\ getText()
 comment1.text=\n\ Return\ the\ text\ of\ this\ post.\n\ \n\ @return\ The\ post's\ message\ text.\n
 comment2.params=
-comment2.target=java.lang.String\ display()
+comment2.target=java.lang.String\ displayContent()
 comment2.text=\n\ Display\ the\ details\ of\ this\ post.\n\ \n\ (Currently\:\ Print\ to\ the\ text\ terminal.\ This\ is\ simulating\ display\ \n\ in\ a\ web\ browser\ for\ now.)\n
 numComments=3
