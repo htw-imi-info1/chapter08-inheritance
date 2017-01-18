@@ -42,10 +42,15 @@ public class NewsFeed
      */
     public void show()
     {
-        // display all posts
+        System.out.println(displayAll());
+    }
+
+    public String displayAll(){
+        String result = "";
         for(Post post : posts) {
-            post.display();
-            System.out.println();   // empty line between posts
+            result += post.display();
+            result +="\n";// empty line between posts
         }
+        return result;
     }
 }

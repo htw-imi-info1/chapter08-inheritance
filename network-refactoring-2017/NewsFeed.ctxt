@@ -8,4 +8,6 @@ comment1.text=\n\ Add\ a\ post\ to\ the\ news\ feed.\n\ \n\ @param\ post\ \ The\
 comment2.params=
 comment2.target=void\ show()
 comment2.text=\n\ Show\ the\ news\ feed.\ Currently\:\ print\ the\ news\ feed\ details\n\ to\ the\ terminal.\ (To\ do\:\ replace\ this\ later\ with\ display\n\ in\ web\ browser.)\n
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ displayAll()
+numComments=4
