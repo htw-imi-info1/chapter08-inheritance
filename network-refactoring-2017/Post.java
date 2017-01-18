@@ -8,12 +8,12 @@ import java.util.ArrayList;
  * @author Michael Kölling and David J. Barnes
  * @version 0.2
  */
-public class Post 
+public abstract class Post 
 {
-    private String username;  // username of the post's author
-    private long timestamp;
-    private int likes;
-    private ArrayList<String> comments;
+    protected String username;  // username of the post's author
+    protected long timestamp;
+    protected int likes;
+    protected ArrayList<String> comments;
 
     /**
      * Constructor for objects of class Post.
@@ -66,34 +66,7 @@ public class Post
         return timestamp;
     }
 
-    /**
-     * Display the details of this post.
-     * 
-     * (Currently: Print to the text terminal. This is simulating display 
-     * in a web browser for now.)
-     */
-    public String display()
-    {
-        String result = "";
-        result += username;
-        result +="\n";
-        result += timeString(timestamp);
-        result +="\n";
-        if(likes > 0) {
-            result += "  -  " + likes + " people like this.\n";
-        }
-        else {
-              result +="\n";
-        }
-        
-        if(comments.isEmpty()) {
-            result += "   No comments.\n";
-        }
-        else {
-            result += "   " + comments.size() + " comment(s). Click here to view.\n";
-        }
-        return result;
-    }
+  
     
     /**
      * Create a string describing a time point in the past in terms 
@@ -104,7 +77,7 @@ public class Post
      * @return      A relative time string for the given time
      */
     
-    private String timeString(long time)
+    protected String timeString(long time)
     {
         long current = System.currentTimeMillis();
         long pastMillis = current - time;      // time passed in milliseconds
@@ -117,4 +90,5 @@ public class Post
             return seconds + " seconds ago";
         }
     }
+    public abstract String display();
 }

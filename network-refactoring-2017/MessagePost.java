@@ -33,4 +33,35 @@ public class MessagePost extends Post
     {
         return message;
     }
+     /**
+     * Display the details of this post.
+     * 
+     * (Currently: Print to the text terminal. This is simulating display 
+     * in a web browser for now.)
+     */
+    public String display()
+    {
+        String result = "";
+        result += username;
+        result +="\n";
+        
+        result += message;
+        result +="\n";
+        result += timeString(timestamp);
+        result +="\n";
+        if(likes > 0) {
+            result += "  -  " + likes + " people like this.\n";
+        }
+        else {
+              result +="\n";
+        }
+        
+        if(comments.isEmpty()) {
+            result += "   No comments.\n";
+        }
+        else {
+            result += "   " + comments.size() + " comment(s). Click here to view.\n";
+        }
+        return result;
+    }
 }
